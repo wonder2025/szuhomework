@@ -21,8 +21,9 @@ public class ReceiveDemo {
 
 			//获取数据包的地址
 			String ip = dp.getAddress().getHostAddress();
-			//获取数据包的地址
+			//获取数据包的的内容
 			String s = new String(dp.getData(), 0, dp.getLength());
+			//打印
 			System.out.println("from " + ip + " data is : " + s);
 		}
 
