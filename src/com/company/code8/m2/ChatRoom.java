@@ -1,7 +1,5 @@
 package com.company.code8.m2;
 
-import com.company.code8.m2.ReceiveThread;
-import com.company.code8.m2.SendThread;
 
 import java.io.IOException;
 import java.net.DatagramSocket;
@@ -11,6 +9,7 @@ import java.net.DatagramSocket;
  */
 public class ChatRoom {
 	public static void main(String[] args) throws IOException {
+		//新建UDP服务，端口号是12345
 		DatagramSocket dsSend = new DatagramSocket();
 		DatagramSocket dsReceive = new DatagramSocket(12306);
 
