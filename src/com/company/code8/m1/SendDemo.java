@@ -20,6 +20,7 @@ public class SendDemo {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String line = null;
 		//读取文件
+		line = br.readLine();
 		while ((line = br.readLine()) != null) {
 			//键入886则中断循环
 			if ("886".equals(line)) {
@@ -31,6 +32,8 @@ public class SendDemo {
 			//封装UDP报文
 			DatagramPacket dp = new DatagramPacket(bys, bys.length,
 					InetAddress.getByName("localhost"), 12345);
+//			DatagramPacket dp = new DatagramPacket(bys, bys.length,
+//					InetAddress.getByName("172.31.72.102"), 12345);
 
 			//发送报文
 			ds.send(dp);
